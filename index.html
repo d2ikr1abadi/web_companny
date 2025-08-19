@@ -24,7 +24,7 @@
   <!-- section -->
 <section class="h-screen flex items-center justify-center pt-24">
   <div class="text-center">
-    <h1 id="typing" class="text-5xl font-serif font-light italic tracking-wide mb-4 hero-text text-white">
+    <h1 id="typing" class="text-5xl font-serif font-light italic tracking-wide mb-4 hero-text text-yellow-300">
      Selamat Datang di Katsu lumer
     </h1>
     <p id="typing-p" class="text-lg mb-6 font-serif text-white">
@@ -35,9 +35,9 @@
 </section>
 <!-- end -->
 
-<section id="kontak" class="py-20 bg-rose-800 text-center">
+<section class="py-20 bg-rose-800 text-center">
   <h3 id="typing-h3" class="text-3xl text-white font-serif mb-4">Ada Berbagai varian Menu</h3>
-   <a href="menu.html"
+   <a href="menu.html" id="button"
    class="menu-button inline-block px-6 py-3 bg-red-700 text-white font-serif rounded-lg shadow-md hover:bg-rose-500 duration-300">
    Lihat Menu 🍱
 </a>
@@ -75,14 +75,16 @@
   const h1 = document.getElementById("typing");
   const p = document.getElementById("typing-p");
   const h3 = document.getElementById("typing-h3");
-
+const a = document.getElementById("button");
   const h1Text = h1.textContent;
   const pText = p.textContent;
   const h3text = h3.textContent;
+  const aText = a.textContent;
 
   h1.textContent = "";
   p.textContent = "";
   h3.textContent = "";
+  a.textContent = "";
 
   // Animasi mengetik h1
   gsap.to(h1, {
@@ -103,6 +105,12 @@
     duration: 2,
     delay: 4, // tunggu setelah p
     text: h3text,
+    ease: "none"
+  });
+  gsap.to(a, {
+    duration: 2,
+    delay: 6, // tunggu setelah p
+    text: aText,
     ease: "none"
   });
 </script>
