@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Companny</title>
+    <link rel="icon" href="img/logo icon.jpeg" type="image/x-icon"/>
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+</head>
+<body class="bg-gray-900">
+   <header class="fixed w-full bg-transparent backdrop-blur-md shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center ">
+      <img src="img/logo icon.jpeg" alt="" class="w-auto h-20 rounded-lg" />
+      <nav class="space-x-6 flex items-center">
+        <a href="#" class="text-white font-serif hover:bg-red-800 rounded-lg py-3 px-6">Beranda</a>
+        <a href="tentang.html" class="text-white font-serif hover:bg-red-800 rounded-lg py-3 px-6">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  <!-- section -->
+<section class="h-screen flex items-center justify-center pt-24 bg-gray-900">
+  <div class="text-center">
+    <h1 id="typing" class="text-5xl font-serif font-light italic tracking-wide mb-4 hero-text text-yellow-300">
+     Selamat Datang di Katsu lumer
+    </h1>
+    <p id="typing-p" class="text-lg mb-6 text-white font-serif">
+      Disini kami menyediakan informasi tentang menu-menu yang kami sajikan.
+    </p>
+   
+  </div>
+</section>
+<!-- end -->
+
+<section id="kontak" class="py-20 bg-gray-800  text-center">
+  <h3 id="typing-h3" class="text-3xl text-white font-serif mb-4">Ada Berbagai varian Menu</h3>
+   <a href="menu.html"
+   class="menu-button inline-block px-6 py-3 bg-red-600 text-white font-serif rounded-lg shadow-md hover:bg-red-700 transition duration-300">
+   Lihat Menu 🍱
+</a>
+ 
+</section>
+
+ <!-- Footer dengan Media Sosial -->
+  <footer class="bg-gray-500 text-center py-6 text-white">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="#" target="#" class="hover:text-blue-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.07V12h2.43V9.8c0-2.4 1.42-3.73 3.6-3.73 1.04 0 2.13.18 2.13.18v2.34h-1.2c-1.18 0-1.54.73-1.54 1.48V12h2.62l-.42 2.88h-2.2v6.99A10 10 0 0022 12z"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/muhhdzik/?utm_source=ig_web_button_share_sheet" target="_blank" class="hover:text-rose-400 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9a5.5 5.5 0 01-5.5 5.5h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm0 2A3.5 3.5 0 004 7.5v9A3.5 3.5 0 007.5 20h9a3.5 3.5 0 003.5-3.5v-9A3.5 3.5 0 0016.5 4h-9zm4.5 3.5a5 5 0 110 10 5 5 0 010-10zm0 2A3 3 0 1015 12a3 3 0 00-3-3zm4.75-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
+      </svg>
+    </a>
+    <a href="#" target="#" class="hover:text-blue-400 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19.633 7.997c.013.176.013.353.013.53 0 5.389-4.104 11.61-11.61 11.61A11.548 11.548 0 010 18.257a8.47 8.47 0 006.22-1.73 4.092 4.092 0 01-3.819-2.837 5.165 5.165 0 00.772.06c.539 0 1.065-.072 1.56-.207a4.085 4.085 0 01-3.276-4.004v-.05c.547.305 1.174.49 1.843.512a4.078 4.078 0 01-1.819-3.401c0-.75.202-1.45.556-2.053a11.604 11.604 0 008.421 4.272 4.605 4.605 0 01-.101-.936 4.083 4.083 0 017.062-2.79 8.048 8.048 0 002.593-.988 4.076 4.076 0 01-1.795 2.255 8.19 8.19 0 002.351-.639 8.78 8.78 0 01-2.043 2.12z"/>
+      </svg>
+    </a>
+  </div>
+  <p>&copy; 2025 Om Katsu Om | Follow kami di media sosial</p>
+</footer>
+
+<script>
+  // Aktifkan TextPlugin
+  gsap.registerPlugin(TextPlugin);
+
+  // Simpan teks asli, lalu kosongkan dulu
+  const h1 = document.getElementById("typing");
+  const p = document.getElementById("typing-p");
+  const h3 = document.getElementById("typing-h3");
+
+  const h1Text = h1.textContent;
+  const pText = p.textContent;
+  const h3text = h3.textContent;
+
+  h1.textContent = "";
+  p.textContent = "";
+  h3.textContent = "";
+
+  // Animasi mengetik h1
+  gsap.to(h1, {
+    duration: 2,
+    text: h1Text,
+    ease: "none"
+  });
+
+  // Animasi mengetik p setelah h1 selesai
+  gsap.to(p, {
+    duration: 2,
+    delay: 2, // tunggu setelah h1
+    text: pText,
+    ease: "none"
+  });
+  // Animasi mengetik h3 setelah p selesai
+  gsap.to(h3, {
+    duration: 2,
+    delay: 4, // tunggu setelah p
+    text: h3text,
+    ease: "none"
+  });
+</script>
+</body>
+</html>
